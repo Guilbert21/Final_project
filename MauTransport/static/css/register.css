@@ -1,136 +1,202 @@
-/* you can choose any color you want. don't be afraid to experiment  */
-
 .input, button {
-    width: 100%;
-    height: 40px;
-    position: relative;
-    padding: 10px;
-    border: 0.1px solid #575cb5;
-  }
+  width: 100%;
+  height: 40px;
+  position: relative;
+  padding: 10px;
+  border: 0.1px solid #575cb5;
+}
 
-  li:nth-child(4)::after, li:nth-child(4)::before {
-    background-color: #7a81e0;
-  }
-  
-  li:nth-child(4) .input {
-    background: #7a81e0;
-    color: white;
-    font-size: 16px;
-  }
-  
-  li:nth-child(4) .input:focus {
-    outline: none;
-    border: 3.5px solid #7a81e0;
-    background: white;
-    color: black;
-  }
-  
-  
-  button {
-    background: #6d74e3;
-    border: none;
-  }
-  
-  .wrapper {
-    position: relative;
-    transform: skewY(-14deg);
-  }
-  
-  .wrapper li, button {
-    position: relative;
-    list-style: none;
-    width: 200px;
-    z-index: var(--i);
-    transition: 0.3s;
-    color: white;
-  }
-  
-  .wrapper li::before, button::before {
-    position: absolute;
-    content: '';
-    background: #6d74e3;
-    top: 0;
-    left: -40px;
-    width: 40px;
-    height: 40px;
-    transform-origin: right;
-    transform: skewY(45deg);
-    transition: 0.3s;
-  }
-  
-  .wrapper li::after, button::after {
-    position: absolute;
-    content: '';
-    background: #6d74e3;
-    width: 200px;
-    height: 40px;
-    top: -40px;
-    left: 0;
-    transform-origin: bottom;
-    transform: skewX(45deg);
-    transition: 0.3s;
-  }
-  
-  .wrapper li:nth-child(1)::after, .wrapper li:nth-child(1)::before {
-    background-color: #d8daf7;
-  }
-  
-  .wrapper li:nth-child(2)::after, .wrapper li:nth-child(2)::before {
-    background-color: #c2c5f3;
-  }
-  
-  .wrapper li:nth-child(3)::after, .wrapper li:nth-child(3)::before {
-    background-color: #989deb;
-  }
-  
-  li .input {
-    outline: none;
-    border: none;
-    color: black;
-  }
-  
-  li .input::placeholder {
-    color: black;
-  }
-  
-  li:nth-child(1) .input {
-    background: #d8daf7;
-  }
-  
-  li:nth-child(2) .input {
-    background: #c2c5f3;
-  }
-  
-  li:nth-child(3) .input {
-    background: #989deb;
-  }
-  
-  
-  li:nth-child(1) .input:focus {
-    outline: none;
-    border: 3.5px solid #d8daf7;
-  }
-  
-  li:nth-child(2) .input:focus {
-    outline: none;
-    border: 3.5px solid #c2c5f3;
-  }
-  
-  li:nth-child(3) .input:focus {
-    outline: none;
-    border: 3.5px solid #989deb;
-  }
-  
-  .wrapper li:hover, button:hover {
-    transform: translateX(-20px);
-  }
-  
-  button:hover, button:hover::before, button:hover::after {
-    background: #575cb5;
-  }
-  
-  button:active {
-    transform: translateX(0px);
-  }
-  
-  
+button {
+  background: #6d74e3;
+  border: none;
+}
+
+.wrapper {
+  position: relative;
+  -webkit-transform: skewY(-14deg);
+      -ms-transform: skewY(-14deg);
+          transform: skewY(-14deg);
+}
+
+.wrapper li, button {
+  position: relative;
+  list-style: none;
+  width: 200px;
+  z-index: var(--i);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: white;
+}
+
+.wrapper li::before, button::before {
+  position: absolute;
+  content: '';
+  background: #6d74e3;
+  top: 0;
+  left: -40px;
+  width: 40px;
+  height: 40px;
+  -webkit-transform-origin: right;
+      -ms-transform-origin: right;
+          transform-origin: right;
+  -webkit-transform: skewY(45deg);
+      -ms-transform: skewY(45deg);
+          transform: skewY(45deg);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.wrapper li::after, button::after {
+  position: absolute;
+  content: '';
+  background: #6d74e3;
+  width: 200px;
+  height: 40px;
+  top: -40px;
+  left: 0;
+  -webkit-transform-origin: bottom;
+      -ms-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transform: skewX(45deg);
+      -ms-transform: skewX(45deg);
+          transform: skewX(45deg);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.wrapper li:nth-child(1)::after, .wrapper li:nth-child(1)::before {
+  background-color: #d8daf7;
+}
+
+.wrapper li:nth-child(2)::after, .wrapper li:nth-child(2)::before {
+  background-color: #c2c5f3;
+}
+
+.wrapper li:nth-child(3)::after, .wrapper li:nth-child(3)::before {
+  background-color: #989deb;
+}
+
+li .input {
+  outline: none;
+  border: none;
+  color: black;
+}
+
+li .input::-webkit-input-placeholder {
+  color: black;
+}
+
+li .input::-moz-placeholder {
+  color: black;
+}
+
+li .input:-ms-input-placeholder {
+  color: black;
+}
+
+li .input::-ms-input-placeholder {
+  color: black;
+}
+
+li .input::placeholder {
+  color: black;
+}
+
+li:nth-child(1) .input {
+  background: #d8daf7;
+}
+
+li:nth-child(2) .input {
+  background: #c2c5f3;
+}
+
+li:nth-child(3) .input {
+  background: #989deb;
+}
+
+li:nth-child(4) .input {
+  background: #6d74e3;
+}
+
+li:nth-child(1) .input:focus {
+  outline: none;
+  border: 3.5px solid #d8daf7;
+}
+
+li:nth-child(2) .input:focus {
+  outline: none;
+  border: 3.5px solid #6871eb;
+}
+
+li:nth-child(4) .input {
+  background: #7fb2f0;
+}
+
+li:nth-child(5) .input {
+  background: #6898e9;
+}
+
+li:nth-child(6) .input {
+  background: #4c7fe0;
+}
+
+li:nth-child(4) .input:focus {
+  outline: none;
+  border: 3.5px solid #7fb2f0;
+}
+
+li:nth-child(5) .input:focus {
+  outline: none;
+  border: 3.5px solid #6898e9;
+}
+
+li:nth-child(6) .input:focus {
+  outline: none;
+  border: 3.5px solid #4c7fe0;
+}
+
+.wrapper li:nth-child(4)::after, .wrapper li:nth-child(4)::before {
+  background-color: #7fb2f0;
+}
+
+.wrapper li:nth-child(5)::after, .wrapper li:nth-child(5)::before {
+  background-color: #6898e9;
+}
+
+.wrapper li:nth-child(6)::after, .wrapper li:nth-child(6)::before {
+  background-color: #4c7fe0;
+}
+
+.wrapper li:nth-child(7)::after, .wrapper li:nth-child(7)::before {
+  background-color: #344e97;
+}
+
+li:nth-child(7) .input {
+  background: #344e97;
+}
+
+li:nth-child(7) .input:focus {
+  outline: none;
+  border: 3.5px solid #344e97;
+}
+
+button:hover, button:hover::before, button:hover::after {
+  background: #344e97;
+}
+
+button:active {
+  -webkit-transform: translateX(0px);
+      -ms-transform: translateX(0px);
+          transform: translateX(0px);
+}
+
+button:active::before, button:active::after {
+  -webkit-transform: translateX(0px);
+      -ms-transform: translateX(0px);
+          transform: translateX(0px);
+}
+
+.wrapper li:nth-child(1):hover, .wrapper li:nth-child(1):hover::before, .wrapper li:nth-child(1):hover::after {
+  background: #d8daf7;
+}
+

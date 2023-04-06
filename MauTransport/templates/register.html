@@ -1,14 +1,40 @@
-<link rel="stylesheet" href="static/css/register.css">
-<form class="form" action="" method="POST">
-  {% csrf_token %}
-    <ul class="wrapper">
-      
-      <li style="--i:5;"><input class="input" type="text" placeholder="Username" required=""></li>
-      <li style="--i:4;"><input class="input" placeholder="Phone number" required="" name="phone"></li>
-      <li style="--i:3;"><input class="input" type="email" placeholder="E-mail" required="" name="email"></li>
-      <li style="--i:2;"><input class="input" type="password" placeholder="Password" required="" name="password"></li>
+<head>
+  {% load static %}
+  <link rel="website icon" type="png" href="{% static 'images/g-logo.png' %}">
+  <link rel="stylesheet" href="{% static 'css/register.css' %}">
+  <title>MauTransport Register</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url("{% static 'images/background.png' %}" );
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
 
-      <button style="--i:1;">Submit</button>
-    </ul>
-  </form>
-  
+    .container {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <form class="form" action="" method='POST'>
+      {% csrf_token %}
+      <ul class="wrapper">
+        <li style="--i:5;"><input class="input" type="text" placeholder="First Name" required="" name="fname"></li>
+        <li style="--i:4;"><input class="input" type="text" placeholder="Last Name" required="" name="lname"></li>
+        <li style="--i:3;"><input class="input" placeholder="Phone Number" required="" name="phone"></li>
+        <li style="--i:2;"><input class="input" type="email" placeholder="E-mail" required="" name="email"></li>
+        <li style="--i:1;"><input class="input" type="password" placeholder="Password" required="" name="password"></li>
+        <button style="--i:0;" type="submit">Submit</button>
+      </ul>
+    </form>
+  </div>
+</body>

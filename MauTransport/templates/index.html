@@ -8,6 +8,7 @@
 <meta name="keywords" content="">
 <meta name="author" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="website icon" type="png" href="static/images/g-logo.png" style="border-radius: 50%;">
 
 <title>MauTransport</title>
 
@@ -57,9 +58,7 @@
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="#home" class="smoothScroll">Home</a></li>
 				<li><a href="#about" class="smoothScroll">About</a></li>
-				<li><a href="#screenshot" class="smoothScroll">Service</a></li>
-                <li><a href="#pricing" class="smoothScroll">Pricing</a></li>
-                <li><a href="#newsletter" class="smoothScroll">Subscribe</a></li>
+				<li><a href="#screenshot" class="smoothScroll">Our Team</a></li>
         		<li><a href="#" data-toggle="modal" data-target="#modal1">Contact</a></li>
 			</ul>
 		</div>
@@ -78,13 +77,20 @@
                <div class="wow fadeInUp col-md-6 col-sm-5 col-xs-10 col-xs-offset-1 col-sm-offset-0" data-wow-delay="0.2s">
                     <img src="static/images/home-img.png" class="img-responsive" alt="Home">
                </div>
-
+               <!-- <div>
+                    {% if messages %}
+                         {% for message in messages %}
+                              <div class="alert alert-{{message.tags}}"> {{message}}</div>
+                         {% endfor %}
+                    {% endif %}
+               </div> -->
+               
                <div class="col-md-6 col-sm-7 col-xs-12">
                     <div class="home-thumb">
                          <h1 class="wow fadeInUp" data-wow-delay="0.6s">MauTransport</h1>
                          <p class="wow fadeInUp" data-wow-delay="0.8s">Moving you forward with MauTransport</p>
-                         <a href="#pricing" class="wow fadeInUp section-btn btn btn-success smoothScroll" data-wow-delay="1s">Sign Up</a>
-                         <a href="#pricing" class="wow fadeInUp section-btn btn btn-success smoothScroll" data-wow-delay="1s">Register</a>
+                         <a href="{% url 'login-page' %}" class="wow fadeInUp section-btn btn btn-success smoothScroll" data-wow-delay="1s">Log In</a>
+                         <a href="{% url 'register-page' %}" class="wow fadeInUp section-btn btn btn-success smoothScroll"  data-wow-delay="1s">Register</a>
 
                     </div>
                </div>
@@ -161,84 +167,61 @@
      </div>
 </section>
 
+<!-- Our Team Section -->
 
-<!-- Divider Section -->
-
-{% comment %} <section id="divider">
-     <div class="container">
-          <div class="row">
-
-               <div class="col-md-offset-2 col-md-8 col-sm-12">
-                    <h2 class="wow fadeInUp" data-wow-delay="0.4s">Praesent tempor nec orci eu condimentum. Vestibulum varius lorem sed odio lacinia, ut efficitur tellus convallis. Phasellus convallis est nisi, sit amet accumsan ipsum elementum quis. Mauris ac sem mi.</h2>
-                    <a href="#screenshot" class="wow fadeInUp section-btn btn btn-success smoothScroll" data-wow-delay="0.8s">Learn More</a>
-               </div>
-
-          </div>
-     </div>
-</section> {% endcomment %}
-
-
-<!-- Screenshot Section -->
-
-{% comment %} <section id="screenshot">
+<section id="screenshot">
      <div class="container">
           <div class="row">
 
                <div class="col-md-offset-2 col-md-8 col-sm-12">
                     <div class="section-title">
-                         <h1>App Screenshots</h1>
-                         <p class="wow fadeInUp" data-wow-delay="0.8s">Nulla nisi purus, ultrices et scelerisque at, ullamcorper et ex. Phasellus at nisi lobortis, semper tortor sed, gravida neque.</p>
+                         <h1>Our team</h1>
+                         <p class="wow fadeInUp" data-wow-delay="0.8s">Please allow me to introduce our team of experts who are here to provide you with top-notch assistance and support throughout your relocation process. Our dedicated professionals are committed to ensuring that your moving experience is as seamless and stress-free as possible. We understand the importance of a smooth transition and we are fully equipped to provide you with the highest level of professional service. Thank you for entrusting us with your moving needs.</p>
                     </div>
                </div>
 
-               <!-- Screenshot Owl Carousel -->
+               <!-- Our team Owl Carousel -->
                <div id="screenshot-carousel" class="owl-carousel">
 
                     <div class="item col-md-3 col-sm-3 wow fadeInUp" data-wow-delay="0.9s">
-                         <a href="images/screenshot-img1.jpg" class="image-popup">
-                              <img src="images/screenshot-img1.jpg" class="img-responsive" alt="screenshot">
+                         <a href="static/images/alexis.png" style = "height:395px; width: 260px;" class="image-popup">
+                              <img src="static/images/alexis.png" style = "height:395px; width: 260px;" class="img-responsive" alt="screenshot">
                          </a>
                     </div>
 
                     <div class="item col-md-3 col-sm-3 wow fadeInUp" data-wow-delay="0.9s">
-                         <a href="images/screenshot-img2.jpg" class="image-popup">
-                              <img src="images/screenshot-img2.jpg" class="img-responsive" alt="screenshot">
+                         <a href="static/images/maeva.png" style = "height:395px; width: 260px;" class="image-popup">
+                              <img src="static/images/maeva.png" style = "height:395px; width: 260px;" class="img-responsive" alt="screenshot">
                          </a>
                     </div>
 
                     <div class="item col-md-3 col-sm-3 wow fadeInUp" data-wow-delay="0.9s">
-                         <a href="images/screenshot-img3.jpg" class="image-popup">
-                              <img src="images/screenshot-img3.jpg" class="img-responsive" alt="screenshot">
+                         <a href="static/images/bob.png" style = "height:395px; width: 260px;" class="image-popup">
+                              <img src="static/images/bob.png" style = "height:395px; width: 260px;" class="img-responsive" alt="screenshot">
                          </a>
                     </div>
 
                     <div class="item col-md-3 col-sm-3 wow fadeInUp" data-wow-delay="0.9s">
-                         <a href="images/screenshot-img4.jpg" class="image-popup">
-                              <img src="images/screenshot-img4.jpg" class="img-responsive" alt="screenshot">
+                         <a href="static/images/sponge.png" style = "height:395px; width: 260px;" class="image-popup">
+                              <img src="static/images/sponge.png" style = "height:395px; width: 260px;" class="img-responsive" alt="screenshot">
                          </a>
                     </div>
 
                     <div class="item col-md-3 col-sm-3 wow fadeInUp" data-wow-delay="0.9s">
-                         <a href="images/screenshot-img5.jpg" class="image-popup">
-                              <img src="images/screenshot-img5.jpg" class="img-responsive" alt="screenshot">
+                         <a href="static/images/nelly.png" style = "height:395px; width: 260px;" class="image-popup">
+                              <img src="static/images/nelly.png" style = "height:395px; width: 260px;" class="img-responsive" alt="screenshot">
                          </a>
                     </div>
 
                     <div class="item col-md-3 col-sm-3 wow fadeInUp" data-wow-delay="0.9s">
-                         <a href="images/screenshot-img6.jpg" class="image-popup">
-                              <img src="images/screenshot-img6.jpg" class="img-responsive" alt="screenshot">
+                         <a href="static/images/hilonna.png" style = "height:395px; width: 260px;" class="image-popup">
+                              <img src="static/images/hilonna.png" style = "height:395px; width: 260px;" class="img-responsive" alt="screenshot">
                          </a>
                     </div>
 
                     <div class="item col-md-3 col-sm-3 wow fadeInUp" data-wow-delay="0.9s">
-                         <a href="images/screenshot-img7.jpg" class="image-popup">
-                              <img src="images/screenshot-img7.jpg" class="img-responsive" alt="screenshot">
-                         </a>
-                    </div>
-
-                    <div class="item col-md-3 col-sm-3 wow fadeInUp" data-wow-delay="0.9s">
-                         <a href="images/screenshot-img8.jpg" class="image-popup">
-                              <img src="images/screenshot-img8.jpg" class="img-responsive" alt="screenshot">
+                         <a href="static/images/yash.png" style = "height:395px; width: 260px;" class="image-popup">
+                              <img src="static/images/yash.png" style = "height:395px; width: 260px;" class="img-responsive" alt="screenshot">
                          </a>
                     </div>
 
@@ -247,102 +230,6 @@
           </div>
      </div>
 </section>
-
-
-<!-- Pricing Section -->
-
-<section id="pricing">
-     <div class="container">
-          <div class="row">
-
-                <div class="col-md-12 col-sm-12">
-                    <div class="section-title">
-                         <h1>App Pricing</h1>
-                         <hr>
-                    </div>
-               </div>
-
-               <div class="wow fadeInUp col-md-4 col-sm-4" data-wow-delay="0.4s">
-                    <div class="pricing-plan">
-                         <div class="pricing-month">
-                              <h2>$60</h2>
-                         </div>
-                         <div class="pricing-title">
-                              <h3>Starter</h3>
-                         </div>
-                         <p>40 Users</p>
-                         <p>10GB per user</p>
-                         <p>Unlimited Support</p>
-                         <p>1 Year License</p>
-                         <button class="btn btn-default section-btn">Register now</button>
-                    </div>
-               </div>
-
-               <div class="wow fadeInUp col-md-4 col-sm-4" data-wow-delay="0.6s">
-                    <div class="pricing-plan">
-                         <div class="pricing-month">
-                              <h2>$120</h2>
-                         </div>
-                         <div class="pricing-title">
-                              <h3>Business</h3>
-                         </div>
-                         <p>100 Users</p>
-                         <p>20GB per user</p>
-                         <p>Unlimited Support</p>
-                         <p>2 Years License</p>
-                         <button class="btn btn-default section-btn">Register now</button>
-                    </div>
-               </div>
-
-               <div class="wow fadeInUp col-md-4 col-sm-4" data-wow-delay="0.8s">
-                    <div class="pricing-plan">
-                         <div class="pricing-month">
-                              <h2>$200</h2>
-                         </div>
-                         <div class="pricing-title">
-                              <h3>Advanced</h3>
-                         </div>
-                         <p>200 Users</p>
-                         <p>30GB per user</p>
-                         <p>Unlimted Support</p>
-                         <p>3 Years License</p>
-                         <button class="btn btn-default section-btn">Register now</button>
-                    </div>
-               </div>
-
-          </div>
-     </div>
-</section>
-
-
-<!-- Newsletter Section -->
-
-<section id="newsletter">
-     <div class="overlay"></div>
-     <div class="container">
-          <div class="row">
-
-               <div class="col-md-offset-2 col-md-8 col-sm-12">
-                    <div class="wow bounceIn section-title">
-                         <h2>Subscribe Newsletter</h2>
-                         <p class="wow fadeInUp" data-wow-delay="0.5s">Maecenas orci sem, mollis quis risus a, venenatis condimentum felis. Integer ut bibendum ipsum. Etiam a tristique sapien, ut dictum augue.</p>
-                    </div>
-                    <div class="wow fadeInUp newsletter-form" data-wow-delay="0.8s">
-                         <form action="#" method="post">
-                              <div class="col-md-8 col-sm-7">
-                                   <input name="email" type="email" class="form-control" id="email" placeholder="Your Email here">
-                           	  </div>
-                              <div class="col-md-4 col-sm-5">
-                                   <input name="submit" type="submit" class="form-control" id="submit" value="Send Newsletter">
-                              </div>
-                         </form>
-                    </div>
-               </div>
-
-          </div>
-     </div>
-</section>
-
 
 <!-- Footer Section -->
 
@@ -352,9 +239,7 @@
 
                <div class="col-md-8 col-sm-6">
                     <div class="wow fadeInUp footer-copyright" data-wow-delay="0.4s">
-                         <p>Copyright &copy; 2016 Your App Starter
-                         <span>||</span> 
-                         Design: <a href="https://plus.google.com/+templatemo" title="free css templates" target="_blank">Templatemo</a></p>
+                         <p>Copyright &copy; 2023 MauTransport
                     </div>
                </div>
 
@@ -397,7 +282,7 @@
 <!-- Back top -->
 
 <a href="#" class="go-top"><i class="fa fa-angle-up"></i></a>
- {% endcomment %}
+ 
 
 <!-- SCRIPTS -->
 
