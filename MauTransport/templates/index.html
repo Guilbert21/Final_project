@@ -59,7 +59,7 @@
 				<li><a href="#home" class="smoothScroll">Home</a></li>
 				<li><a href="#about" class="smoothScroll">About</a></li>
 				<li><a href="#screenshot" class="smoothScroll">Our Team</a></li>
-        		<li><a href="#" data-toggle="modal" data-target="#modal1">Contact</a></li>
+        		<li><a href="#" data-toggle="modal" data-target="#modal1">Feedback</a></li>
 			</ul>
 		</div>
 
@@ -265,15 +265,16 @@
       <div class="modal-content modal-popup">
           <div class="modal-header">
                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-               <h2 class="modal-title">Contact Form</h2>
+               <h2 class="modal-title">Feedback</h2>
           </div>
 
-               <form action="#" method="post">
-                    <input name="name" type="text" class="form-control" id="name" placeholder="Your Name" required>
-                 	<input name="email" type="email" class="form-control" id="email" placeholder="Email Address" required>
-                 	<textarea name="message" rows="3" class="form-control" id="message" placeholder="Message" required></textarea>
-                    <input name="submit" type="submit" class="form-control" id="submit" value="Send Message">
-               </form>
+          <form action="{% url 'home-page' %}" method="post">
+               {% csrf_token %}
+               <input name="name" type="text" class="form-control" id="name" placeholder="Your Name" required>
+               <input name="email" type="email" class="form-control" id="email" placeholder="Email Address" required>
+               <textarea name="message" rows="3" class="form-control" id="message" placeholder="Message" required></textarea>
+               <input name="submit" type="submit" class="form-control" id="submit" value="Send Message">
+           </form>
           </div>
      </div>
 </div>

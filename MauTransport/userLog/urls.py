@@ -13,5 +13,8 @@ urlpatterns = [
     path('login/', views.login, name='login-page'),
 
     # error
-    path('error/', views.error, name='error-page')
+    path('error/', views.error, name='error-page'),
+
+    #feedback
+    path('home/', views.save_feedback, name='home'),
 ]

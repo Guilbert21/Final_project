@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
-from .models import Profile
+from .models import Profile, feedback
 
 
 
@@ -69,4 +69,13 @@ def login(request):
             return redirect('error-page')
 
     return render(request, 'templates/login.html', {} )
+
+def save_feedback(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        message = request.POST.get('message')
+        feedback.objects.create(name=name, email=email, message=message)
+        feedback.save()
+        return redirect('home-page')
 
