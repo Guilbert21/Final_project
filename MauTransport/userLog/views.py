@@ -75,7 +75,8 @@ def save_feedback(request):
         name = request.POST.get('name')
         email = request.POST.get('email')
         message = request.POST.get('message')
-        feedback.objects.create(name=name, email=email, message=message)
+        # feedback.objects.create(name=name, email=email, message=message)
+        feedback = feedback(name=name, email=email, message=message)
         feedback.save()
         return redirect('home-page')
 

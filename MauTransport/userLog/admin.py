@@ -8,4 +8,5 @@ admin.site.register(Profile, ProfileAdmin)
 class FeedbackAdmin(admin.ModelAdmin):
     list_display = ('name', 'email', 'message', 'timestamp')
 
-admin.site.register(feedback, FeedbackAdmin)
+admin.site.register(feedback, FeedbackAdmin),
+
